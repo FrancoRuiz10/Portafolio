@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #110934;
+}
+.logo{
+    width: 8.5rem;
+}
+.lista{
+    display:flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+.lista a{
+    text-decoration: none;
+    color: white;
+}
+
+
+body{
+    background-image:url(./img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} 
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+/* fin de header */
+/* inicio de sobre mi */
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.517);
+
+}
+.texto{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-left: 8%;
+}
+
+.texto p{
+    font-size: 1.5rem;
+    color: white;
+    background-color: #110934;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-left: 15px;
+}
+.sobremi img{
+    margin-left: 15px;
+    width: 35%;
+    border-radius: 25%;
+    border: #110934 solid 10px;
+}
+.texto a{
+    align-items: center;
+    text-decoration: none;
+    color: rgb(175, 159, 159);  
+}
+/* fin de sobre mi */
+/* inicio de  mis proyecto */
+.contenedor1{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+}
+
+.contenedor1 figure{
+    position: relative;
+    height: 450px;
+    width: 650px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,50);
+    cursor: pointer;
+}
+.contenedor1 figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.contenedor1 figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11,103,123,0.6);
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.contenedor1 figure:hover>.capa{
+    opacity: 1;
+    visibility: visible;
+
+}
+.contenedor1 figure:hover>.capa h2{
+    margin-top: 70px;
+    margin-bottom: 15px;   
+}
+.contenedor1 h2{
+    font-size: 45px;
+}
+.contenedor1 p{
+    font-size: 25px;
+    color: aliceblue;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+.contenedor1 h2{
+    color: white;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.517);
+
+}
+.pagina2{
+    margin-left: 60px;
+}
+/* fin de mis proyecto */
+/* inicio de certificados */
+.titulos1 img{
+    margin-right: 50px;
+    width: 42%;
+    cursor: pointer;
+    transition: 2s;
+}
+.imagen1{
+    margin-left: 90px;
+}
+.titulos1 img:hover{
+    transform: scale(1.2,1.2);
+    transition: 2s;
+}
+/* fin de certificados */
+/* inicio de habilidades */
+.lenguajes img{
+    width: 30%;
+}
+.lenguajes{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.lenguajes p{
+    color: white;
+}
+.lenguaje{
+    padding: 30px;
+}
+/* fin de habilidaes */
+/* inicio de footer */
+footer{
+    background-color: black;
+    width: 100%;
+}
+h3{
+    color: white;
+    font-size: 35px;
+}
+.iconos{
+    display: flex;
+}
+.iconos a{
+    color:white;
+    text-decoration: none;    
+}
+.iconos p{
+    color: white;
+}
+footer h1{
+    font-size: 15px;
+}
+/* fin de footer */
+@media (max-width: 801px){
+    header{
+        flex-direction: column;
+    }
+    .lista{
+        margin-top: 1rem; 
+        font-size: 22px;
+    }
+    /* fin de header */
+    /* inicio de sobre mi */
+    .sobremi h1{
+        font-size: 3rem;
+    }
+    .texto{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        margin-left: 0%;
+    }
+    
+    .texto p{
+        font-size: 1.8rem;
+        color: white;
+        background-color: #110934;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-left: 15px;
+    }
+    .sobremi img{
+        width: 60%;
+        border-radius: 25%;
+        border: #110934 solid 10px;
+    }
+    /* fin de sobre mi*/
+    /* inicio de mis proyecto */
+    .contenedor1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 102vh;
+    }
+    
+    .contenedor1 figure{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        height: 400px;
+        width: 650px;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,50);
+        cursor: pointer;
+    }
+    .contenedor1 figure img{
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-out;
+    }
+    .contenedor1 figure .capa{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(11,103,123,0.6);
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .contenedor1 figure:hover>.capa{
+        opacity: 1;
+        visibility: visible;
+    
+    }
+    .contenedor1 figure:hover>.capa h2{
+        margin-top: 70px;
+        margin-bottom: 15px;   
+    }
+    .contenedor1 p{
+        font-size: 20px;
+        color: aliceblue;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 220px;
+        margin: auto;
+    }
+    .pagina1 p{
+        font-size: 18px;
+    }
+    .contenedor1 h2{
+        color: white;
+        font-weight: 400;
+        margin-bottom: 120px;
+        transition: all 500ms ease-out;
+        margin-top: 30px;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.517);
+    }
+    .pagina2{
+        margin-left: 0px;
+    }
+    /* fin de mis proyecto */
+    /* inicio de certificados */
+    .titulos1 img{
+        display: flex;
+        margin-right: 50px;
+        width: 70%;
+        cursor: pointer;
+        transition: 2s;
+        margin-left: 13%;
+        margin-bottom: 25px;
+    }
+    /* fin de certificados */
+    /* inicio  de habilidades */
+.lenguajes img{
+    width: 90%;
+}
+.lenguajes{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.lenguajes p{
+    color: white;
+}
+.lenguaje{
+    padding: 30px;
+}
+}
+@media (max-width: 501px){
+    .lista{
+        font-size: 16px;
+    }
+    .sobremi h1{
+        font-size: 2.5rem;
+    }
+    /* fin de header */
+    /* inicio de sobre mi*/
+    .texto{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .texto p{
+        font-size: 1.5rem;
+        color: white;
+        background-color: #110934;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-left: 15px;
+    }
+    .sobremi img{
+        width: 55%;
+        border-radius: 25%;
+        border: #110934 solid 10px;
+    }
+    /* fin de sobre mi */
+    /* inicio de mis proyecto */
+    .contenedor1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 82vh;
+    }
+    
+    .contenedor1 figure{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        height: 300px;
+        width: 450px;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,50);
+        cursor: pointer;
+    }
+    .contenedor1 figure img{
+        width: 100%;
+        height: 100%;
+        transition: all 500ms ease-out;
+    }
+    .contenedor1 figure .capa{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(11,103,123,0.6);
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+    .contenedor1 figure:hover>.capa{
+        opacity: 1;
+        visibility: visible;
+    
+    }
+    .contenedor1 figure:hover>.capa h2{
+        margin-top: 70px;
+        margin-bottom: 15px;   
+    }
+    .contenedor1 p{
+        font-size: 20px;
+        color: aliceblue;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 220px;
+        margin: auto;
+    }
+    .pagina1 p{
+        font-size: 15px;
+    }
+    .contenedor1 h2{
+        color: white;
+        font-weight: 400;
+        margin-bottom: 120px;
+        transition: all 500ms ease-out;
+        margin-top: 30px;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.517);
+    
+    }
+    .pagina2{
+        margin-left: 0px;
+    }
+    /* fin de mis proyecto */
+
+    .titulos1 img{
+        display: flex;
+        margin-right: 50px;
+        width: 70%;
+        cursor: pointer;
+        transition: 2s;
+        margin-left: 13%;
+        margin-bottom: 25px;
+    }
+  }
+
